@@ -17,7 +17,16 @@ deploy:
 		--runtime python311 \
 		--trigger-http \
 		--allow-unauthenticated \
-		--entry-point gcp_pitch_summary
+		--entry-point gcp_pitch_summary \
+		--memory 512MB
+
+deploy-verbose:
+	gcloud functions deploy pitch-summary \
+		--runtime python311 \
+		--trigger-http \
+		--allow-unauthenticated \
+		--entry-point gcp_pitch_summary \
+		--verbosity=debug
 
 clean:
 	rm -rf __pycache__ *.pyc *.zip

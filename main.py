@@ -36,14 +36,12 @@ async def get_pitch_summary(date: str) -> Dict[str, Any]:
 @functions_framework.http
 def gcp_pitch_summary(request):
     """Entry point for GCP Cloud Functions."""
-    # Convert Flask request to FastAPI-compatible response
-    path = request.path
-    if path.startswith('/pitch-summary/'):
-        date = path.split('/pitch-summary/')[1]
-        loop = asyncio.get_event_loop()
-        result = loop.run_until_complete(get_pitch_summary(date))
-        return json.dumps(result)
-    return json.dumps({"error": "Invalid endpoint"})
+    path = request.path.strip('/')  # Remove leading/trailing slashes
+    if not path:  # Handle empty path
+        return json.dumps({"error": "No date provided"})
+    date = path  # Treat path as date
+    result = asyncio.run(get_pitch_summary(date))  # Run async function synchronously
+    return json.dumps(result)
 
 @click.command()
 @click.option("--date", required=True, type=str, help="Date in YYYY-MM-DD format")
