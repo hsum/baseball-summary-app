@@ -1,0 +1,10 @@
+steps:
+- name: 'gcr.io/cloud-builders/gcloud'
+  args:
+    - 'functions'
+    - 'deploy'
+    - 'pitch-summary'
+    - '--runtime=python311'
+    - '--trigger-http'
+    - '--allow-unauthenticated'
+    - '--entry-point=summarize_data'

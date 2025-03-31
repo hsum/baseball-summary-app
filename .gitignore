@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+.pytest_cache/
+.coverage
+*.log
+
+# Virtual environments
+baseball-summary-app-3.11.9/
+venv/
+.venv/
+
+# Pyenv
+.python-version
+
+# GCP
+.gcloudignore
+*.zip
+
+# IDEs
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,8 @@
+fastapi==0.110.0
+pybaseball==2.2.7
+functions-framework==3.5.0
+pandas==2.2.1
+click==8.1.7
+pytest==8.1.1
+pytest-asyncio==0.23.6
+uvicorn==0.29.0
