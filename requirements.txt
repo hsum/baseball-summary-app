@@ -1,5 +1,5 @@
 fastapi==0.110.0
-git+https://github.com/hsum/pybaseball.git@master#egg=pybaseball
+git+https://github.com/hsum/pybaseball.git@fix-datetime-deprecation#egg=pybaseball
 functions-framework==3.5.0
 pandas==2.2.1
 click==8.1.7
