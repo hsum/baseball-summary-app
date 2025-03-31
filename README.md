@@ -15,3 +15,7 @@ A FastAPI app deployed on GCP Cloud Functions to summarize MLB pitch speeds for 
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+## Live Endpoint
+- GET `https://us-central1-baseball-summary.cloudfunctions.net/pitch-summary/{date}`
+  - Returns pitch stats for a given date (YYYY-MM-DD).
+  - Example: `curl https://us-central1-baseball-summary.cloudfunctions.net/pitch-summary/2023-06-01`
