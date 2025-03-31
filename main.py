@@ -34,7 +34,7 @@ async def get_pitch_summary(date: str) -> Dict[str, Any]:
         return {"error": f"Unexpected error: {str(e)}"}
 
 @functions_framework.http
-def summarize_data(request):
+def gcp_pitch_summary(request):
     """Entry point for GCP Cloud Functions."""
     # Convert Flask request to FastAPI-compatible response
     path = request.path

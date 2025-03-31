@@ -8,7 +8,7 @@ A FastAPI app deployed on GCP Cloud Functions to summarize MLB pitch speeds for 
 
 ## Deployment
 - Deploy: `make deploy`
-- CI/CD: Auto-deploys on push to `main` via `cloudbuild.yaml`
+- CI/CD: Auto-deploys on push to `master` via `cloudbuild.yaml`
 
 ## Endpoints
 - GET `/pitch-summary/{date}`: Returns pitch stats for a date (YYYY-MM-DD).

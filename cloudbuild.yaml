@@ -7,4 +7,9 @@ steps:
     - '--runtime=python311'
     - '--trigger-http'
     - '--allow-unauthenticated'
-    - '--entry-point=summarize_data'
+    - '--entry-point=gcp_pitch_summary'
+    - '--source=.'
+    - '--region=us-central1'
+    - '--project=baseball-summary'
+substitutions:
+  _BRANCH: master

@@ -17,7 +17,7 @@ deploy:
 		--runtime python311 \
 		--trigger-http \
 		--allow-unauthenticated \
-		--entry-point summarize_data
+		--entry-point gcp_pitch_summary
 
 clean:
 	rm -rf __pycache__ *.pyc *.zip
